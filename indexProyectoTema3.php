@@ -105,7 +105,7 @@
     </div>
     <footer> 
         <p>Copyrights © 2021 OUTMANE BOUHOU. All rights reserved.</p>
-       <a href="https://github.com/outmaneBH/proyectoDAW" target="_blank" ><img id="git" src="../webroot/media/img/git.png" alt="Github"/></a>
+       <a href="https://github.com/outmaneBH/proyectoTema3" target="_blank" ><img id="git" src="../webroot/media/img/git.png" alt="Github"/></a>
     </footer>
 </body>
 
