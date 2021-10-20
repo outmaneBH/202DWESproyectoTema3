@@ -87,8 +87,8 @@
             </tr>
             <tr>
                 <td>12. Mostrar el contenido de las variables superglobales (utilizando print_r() y foreach()).</td>
-                <td><a href="#"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
-                <td><a href="#"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+                <td><a href="codigoPHP/ejercicio12.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio12.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
             </tr>
             <tr>
                 <td>13. Crear una función que cuente el número de visitas a la página actual desde una fecha concreta.</td>

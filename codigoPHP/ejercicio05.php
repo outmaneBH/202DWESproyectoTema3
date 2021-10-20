@@ -10,7 +10,7 @@ echo '<h2>timestamp() de hoy </h2>';
 $ofecha = new DateTime();
 echo $foecha->getTimestamp();
 
-echo '<h2>otro ejemplo </h2>';
+echo '<h2>Otro ejemplo </h2>';
 $ofechaActual = new DateTime();
 echo $ofechaActual->format('U = Y-m-d H:i:s') . "\n";
 ?>

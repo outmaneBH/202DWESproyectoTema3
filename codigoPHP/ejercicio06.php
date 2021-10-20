@@ -8,7 +8,7 @@
         $dateTimeNow = new DateTime();
         echo 'Ahora: '.$dateTimeNow->format('l d-m-Y h:m:s');
         date_add($dateTimeNow, new DateInterval('P60D'));
-        echo 'En 60 días: '.$dateTimeNow->format('l d-m-Y h:m:s');
+        echo ' y En 60 días: '.$dateTimeNow->format('l d-m-Y h:m:s');
       
 ?>
 
