@@ -6,9 +6,10 @@
  */
  //Construcción de un DateTime:
         $dateTimeNow = new DateTime();
-        echo 'Ahora: '.$dateTimeNow->format('l d-m-Y h:m:s');
+        echo '<h3 style="color:blue">Calcular la fecha y el día de la semana de dentro de 60 días.</h3>';
+        echo '<strong>Ahora</strong> : '.$dateTimeNow->format('l d-m-Y h:m:s');
         date_add($dateTimeNow, new DateInterval('P60D'));
-        echo ' y En 60 días: '.$dateTimeNow->format('l d-m-Y h:m:s');
+        echo '<br> <strong>Y En 60 días</strong>: '.$dateTimeNow->format('l d-m-Y h:m:s');
       
 ?>
 
