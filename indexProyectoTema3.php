@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUTMANE BOUHOU:ProyectoTema3</title>
-   
+    <link rel="icon" href="../webroot/media/img/fav.png" type="image/ico" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="../webroot/css/proyectoTema3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     
 </head>
 
@@ -82,7 +82,7 @@
             </tr>
             <tr>
                 <td>11. Mostrar el documento PHPDoc del proyecto que se está ejecutando generado con PHP Documentor o ApiGen</td>
-                <td><a href="#"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                <td><a  href="#"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                 <td><a href="#"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
             </tr>
             <tr>
@@ -92,15 +92,43 @@
             </tr>
             <tr>
                 <td>13. Crear una función que cuente el número de visitas a la página actual desde una fecha concreta.</td>
-                <td><a href="#"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
-                <td><a href="#"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+                <td><a href="codigoPHP/ejercicio13.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio13.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
             </tr>
             <tr>
-                <td>13. Crear una función que cuente el número de visitas a la página actual desde una fecha concreta.</td>
-                <td><a href="#"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
-                <td><a href="#"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+                <td>14. Comprobar las librerías que estás utilizando en tu entorno de desarrollo y explotación. Crear tu propia librería de funciones y estudiar la
+forma de usarla en el entorno de desarrollo y en el de explotación</td>
+                <td><a href="codigoPHP/ejercicio14.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio14.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+            </tr>
+           <!-- <tr>
+                <td>15. Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la
+semana. (Array asociativo con los nombres de los días de la semana).</td>
+                <td><a href="codigoPHP/ejercicio15.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio15.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+            </tr>
+            <tr>
+                <td>16. Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</td>
+                <td><a href="codigoPHP/ejercicio16.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio16.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+            </tr>
+            <tr>
+                <td> 17. Inicializar un array (bidimensional con dos índices numéricos) donde almacenamos el nombre de las personas que tienen reservado el
+asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con
+distintas técnicas (foreach(), while(), for()) para mostrar los asientos ocupados en cada fila y las personas que lo ocupan.</td>
+                <td><a href="codigoPHP/ejercicio17.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio17.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+            </tr>-->
+            <tr>
+                <td> 21. Construir un formulario para recoger un cuestionario realizado a una persona y enviarlo a una página Tratamiento.php para que muestre
+las preguntas y las respuestas recogidas.</td>
+                <td><a href="codigoPHP/ejercicio21.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio21.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
             </tr>
         </table>
+
+    </div>
+    <div style="margin-bottom: 9%; ">
 
     </div>
     <footer> 

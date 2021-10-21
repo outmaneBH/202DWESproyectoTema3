@@ -41,6 +41,8 @@ echo " Año : " . $oFechanac->format(' Y ') . "<br>";
 echo " El dia :" . $oFechanac->format('l') . "<br>";
 echo " El mes :" . $oFechanac->format('F') . "<br>";
 echo " TimeStamp :" . $oFechanac->getTimestamp() . "<br>";
+date_add($oFechanac, new DateInterval('P90D'));
+echo 'Añadir 3 meses : ' . $oFechanac->format('l d-m-Y ');
 ?>
 
 
