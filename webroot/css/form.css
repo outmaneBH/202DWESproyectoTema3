@@ -1,0 +1,15 @@
+.w3-container{
+    margin: 50px;
+    text-align: center;
+    width: 350px;
+    position: relative;
+    left: 32%;
+    
+    border: 1px solid red;
+    border-radius:  5px;
+}
+form{
+    padding: 30px;
+}
+
+

@@ -3,6 +3,7 @@ if(isset($_POST['submitbtn']))
 {
     $nombre=$_POST['nombre'];
     $altura=$_POST['altura'];
+    echo $err;
     echo 'El nombre introducido  <strong> '.$nombre.'</strong><br>';
     echo 'Y la altura es :  <strong> '.$altura.'</strong> <br><br>';
     

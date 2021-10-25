@@ -1,9 +1,0 @@
-#ErrorDocument 404 "Not exist this file"
-ErrorDocument 404 /proyectoTema3/error/err.html
-DirectoryIndex indexProyectoTema3.php
-#Redirect 301 /proyectoTema3/google http://www.google.com
-
-
-RewriteEngine on
-RewriteCond% ^ www.outmane.es [NC]
-RewriteRule ^ (. *) $ Http://outmane.es/$1 [R = 301, NC]

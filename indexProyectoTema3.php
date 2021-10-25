@@ -9,7 +9,7 @@
         <link rel="icon" href="../webroot/media/img/fav.png" type="image/ico" sizes="16x16">
         <link rel="stylesheet" type="text/css" href="../webroot/css/proyectoTema3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-
+       
     </head>
 
     <body>
@@ -101,9 +101,9 @@
                     <td><a href="codigoPHP/ejercicio14.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio14.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
                 </tr>
-               <!-- <tr>
+                <tr>
                     <td>15. Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la
-    semana. (Array asociativo con los nombres de los días de la semana).</td>
+                        semana. (Array asociativo con los nombres de los días de la semana).</td>
                     <td><a href="codigoPHP/ejercicio15.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio15.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
                 </tr>
@@ -114,11 +114,11 @@
                 </tr>
                 <tr>
                     <td> 17. Inicializar un array (bidimensional con dos índices numéricos) donde almacenamos el nombre de las personas que tienen reservado el
-    asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con
-    distintas técnicas (foreach(), while(), for()) para mostrar los asientos ocupados en cada fila y las personas que lo ocupan.</td>
+                        asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con
+                        distintas técnicas (foreach(), while(), for()) para mostrar los asientos ocupados en cada fila y las personas que lo ocupan.</td>
                     <td><a href="codigoPHP/ejercicio17.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio17.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
-                </tr>-->
+                </tr>
                 <tr>
                     <td> 21. Construir un formulario para recoger un cuestionario realizado a una persona y enviarlo a una página Tratamiento.php para que muestre
                         las preguntas y las respuestas recogidas.</td>
@@ -132,7 +132,7 @@
                     <td><a href="mostrarcodigo/muestraEjercicio22.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
                 </tr>
                 <tr>
-                <!--     <td>23. Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
+                    <td>23. Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
                         recogidas; en el caso de que alguna respuesta esté vacía o errónea volverá a salir el formulario con el mensaje correspondiente</td>
                     <td><a href="codigoPHP/ejercicio23.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio23.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
@@ -143,7 +143,7 @@
                         respuestas que habíamos tecleado correctamente aparecerán en el formulario y no tendremos que volver a teclearlas.</td>
                     <td><a href="codigoPHP/ejercicio24.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio24.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
-                </tr>-->
+                </tr>
             </table>
 
         </div>
