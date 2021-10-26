@@ -14,13 +14,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>OUTMANE BOUHOU:Ejercicio23</title>
-        <link rel="stylesheet" type="text/css" href="../webroot/css/form.css">
+          <link rel="stylesheet" type="text/css" href="../webroot/css/form.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="icon" href="../webroot/media/img/fav.png" type="image/ico" sizes="16x16">
     </head>
-    <?php
-
-    if (isset($_POST['submitbtn']) && !empty($_POST['nombre']) && !empty($_POST['altura'])) {
+   <?php 
+   if (isset($_POST['submitbtn']) && !empty($_POST['nombre']) && !empty($_POST['altura'])) {
         $nombre = $_POST['nombre'];
         $altura = $_POST['altura'];
         echo 'El nombre introducido  <strong> ' . $nombre . '</strong><br>';
@@ -28,31 +27,34 @@
         echo 'El contenido de $_REQUEST : <pre>';
         print_r($_REQUEST);
         echo '</pre>';
-    } else {
-        ?>
-        <div class="w3-container">
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-                <label>Cual es tu nombre :</label><br>
-                <input type="text" class="w3-input" name="nombre"/><br>
+    }
+ else {
+        
+    
+   ?>
+     <div class="w3-container">
+    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+        <label>Cual es tu nombre :</label><br>
+        <input type="text" class="w3-input" name="nombre"/><br>
         <?php
         if (isset($_POST['submitbtn']) && empty($_POST['nombre'])) {
-            
             echo "<span style='color:red'>Campo de nombre esta vacio.</span>";
         }
         ?><br><br>
-                <label>Cual es tu altura :</label><br>
-                <input type="text" class="w3-input" name="altura"/><br>
-                <?php
-                if (isset($_POST['submitbtn']) && empty($_POST['altura'])) {
-                    echo "<span style='color:red'>Campo de altura esta vacio.</span>";
-                }
-                ?><br><br>
-                <input type="submit" class="w3-button w3-white w3-border w3-border-blue" name="submitbtn" value="Enviar datos"/>
-            </form>
-        </div>
-                <?php
-            }
-            ?>
+        <label>Cual es tu altura :</label><br>
+        <input type="text" class="w3-input" name="altura"/><br>
+        <?php
+        if (isset($_POST['submitbtn']) && empty($_POST['altura']) ) {
+            echo "<span style='color:red'>Campo de altura esta vacio.</span>";
+        }
+        ?><br><br>
+        <input type="submit" class="w3-button w3-white w3-border w3-border-blue" name="submitbtn" value="Enviar datos"/>
+    </form>
+     </div>
+    <?php
+    
+ }
+    ?>
     <body>
     </body>
 </html>

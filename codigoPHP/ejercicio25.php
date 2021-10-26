@@ -1,10 +1,8 @@
 <?php
 /*
  * Autor: Outmane Bouhou
- * Fecha: 25/10/2021
- * Ejercicio:24. Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la  misma página las preguntas y las respuestas
-recogidas; en el caso de que alguna respuesta esté vacía o errónea volverá a salir el formulario con el mensaje correspondiente, pero las
-respuestas que habíamos tecleado correctamente aparecerán en el formulario y no tendremos que volver a teclearlas.
+ * Fecha: 26/10/2021
+ * Ejercicio:25. Trabajar en PlantillaFormulario.php mi plantilla para hacer formularios como churros.
  */
 ?>
 <!DOCTYPE html>
@@ -33,19 +31,32 @@ respuestas que habíamos tecleado correctamente aparecerán en el formulario y n
 require_once '../core/210322ValidacionFormularios.php';
 define("OBLIGATORIO", 1);
 $aErrores = ["name" => null,
-    "altura" => null,
-    ];
+    "surname" => null,
+    "age" => null,
+    "date_of_birth" => null,
+    "address" => null,
+    "phone" => null,
+    "height" => null];
 
 //Varible de entrada correcta inicializada a true
 $entradaOK = true;
 //Array de respuestas inicializado a null
-$avalidos = ["nombre" => null,
-    "altura" => null];
+$avalidos = ["name" => null,
+    "surname" => null,
+    "age" => null,
+    "date_of_birth" => null,
+    "address" => null,
+    "phone" => null,
+    "height" => null];
 //comprobar si ha pulsado el button enviar 
 if (isset($_REQUEST['submitbtn'])) {
     //Comprobar si el campo nombre esta rellenado  y la altura
-    $aErrores["nombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST['nombre'], 200, 1, OBLIGATORIO);
-    $aErrores["altura"] = validacionFormularios::comprobarEntero($_REQUEST['altura'], 200, 1, OBLIGATORIO);
+    $aErrores["name"] = validacionFormularios::comprobarAlfabetico($_REQUEST['name'], 200, 1, OBLIGATORIO);
+  /*  $aErrores["surname"] = validacionFormularios::comprobarEntero($_REQUEST['surname'], 200, 1, OBLIGATORIO);
+    $aErrores["age"] = validacionFormularios::comprobarEntero($_REQUEST['age'], 200, 1, OBLIGATORIO);
+    $aErrores["date_of_birth"] = validacionFormularios::comprobarEntero($_REQUEST['date_of_birth'], 200, 1, OBLIGATORIO);
+    $aErrores["phone"] = validacionFormularios::comprobarEntero($_REQUEST['phone'], 200, 1, OBLIGATORIO);*/
+    $aErrores["height"] = validacionFormularios::comprobarEntero($_REQUEST['height'], 200, 1, OBLIGATORIO);
 //recorrer el array de errores
     foreach ($aErrores as $key => $value) {
         //Comprobar si el campo ha sido rellenado
@@ -70,27 +81,27 @@ if ($entradaOK) {
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
             <label>Cual es tu nombre :</label><br>
             <input type="text" class="w3-input" name="nombre" value="<?php
-    if (isset($_REQUEST['nombre'])) {
-        echo $_REQUEST['nombre'];
-    }
-    ?>"/> <span><?php
-                   //mostrar el error del nombre
-                   //con una if imediato
-                   if ($aErrores["nombre"] != null) {
-                       echo $aErrores['nombre'];
-                   }
-                   ?></span><br>
+            if (isset($_REQUEST['nombre'])) {
+                echo $_REQUEST['nombre'];
+            }
+            ?>"/> <span><?php
+                       //mostrar el error del nombre
+                       //con una if imediato
+                       if ($aErrores["nombre"] != null) {
+                           echo $aErrores['nombre'];
+                       }
+                       ?></span><br>
             <label>Cual es tu altura en (cm) :</label><br>
             <input type="text" class="w3-input" name="altura" value="<?php
-                   if (isset($_REQUEST['altura'])) {
-                       echo $_REQUEST['altura'];
-                   }
-                   ?>"/><span><?php
-                   //mostrar el error del altura
-                   if ($aErrores["altura"] != null) {
-                       echo $aErrores['altura'];
-                   }
-                   ?></span><br><br>
+            if (isset($_REQUEST['altura'])) {
+                echo $_REQUEST['altura'];
+            }
+            ?>"/><span><?php
+                       //mostrar el error del altura
+                       if ($aErrores["altura"] != null) {
+                           echo $aErrores['altura'];
+                       }
+                       ?></span><br><br>
             <input type="submit" class="w3-button w3-white w3-border w3-border-blue" name="submitbtn" value="Enviar datos"/>
         </form>
     </div>

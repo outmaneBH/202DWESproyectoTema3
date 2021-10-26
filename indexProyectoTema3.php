@@ -107,11 +107,7 @@
                     <td><a href="codigoPHP/ejercicio15.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio15.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
                 </tr>
-                <tr>
-                    <td>16. Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</td>
-                    <td><a href="codigoPHP/ejercicio16.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
-                    <td><a href="mostrarcodigo/muestraEjercicio16.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
-                </tr>
+               
                 <tr>
                     <td> 17. Inicializar un array (bidimensional con dos índices numéricos) donde almacenamos el nombre de las personas que tienen reservado el
                         asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con

@@ -44,6 +44,8 @@
 
                 <input type="submit" class="w3-button w3-white w3-border w3-border-blue" name="submitbtn" value="Enviar datos"/>
             </form>
+
+
         <?php } ?>
     </form>
 

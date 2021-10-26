@@ -25,6 +25,7 @@
         <input type="text" class="w3-input" name="nombre"/><br><br>
         <label>Cual es tu altura :</label><br>
         <input type="text" class="w3-input" name="altura"/><br><br>
+  
         <input type="submit" class="w3-button w3-white w3-border w3-border-blue" name="submitbtn" value="Enviar datos"/>
     </form>
     </div>
