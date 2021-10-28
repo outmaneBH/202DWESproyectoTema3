@@ -41,14 +41,14 @@
     //usar for
     echo '<h3>Reccorer el Array usando for()</h3>';
     echo '<table border="2px">';
-    for ($aFilas = 1; $aFilas <= 20; $aFilas++) {
+    for ($fila = 1; $fila <= 20; $fila++) {
         echo '<tr>';
-        for ($aAsientos = 1; $aAsientos <= 15; $aAsientos++) {
+        for ($asiento = 1; $asiento <= 15; $asiento++) {
 
-            if ($aTeatro[$aFilas][$aAsientos] != null) {
-                echo '<td id="td1">' . $aTeatro[$aFilas][$aAsientos] . '</td>';
+            if ($aTeatro[$fila][$asiento] != null) {
+                echo '<td id="td1">' . $aTeatro[$fila][$asiento] . '</td>';
             } else {
-                echo '<td id="td2">Fila '.$aFilas.' asiento '.$aAsientos.' </td>';
+                echo '<td id="td2">Fila ' . $fila . ' asiento ' . $asiento . ' </td>';
             }
         }
         echo '</tr>';
@@ -56,20 +56,20 @@
     echo '</table>';
 
     //usar foreach() {
-    /* echo '<h3>Reccorer el Array usando foreach()</h3>';
-      echo '<table border="2px">';
-      foreach ($aTeatro as $key => $value) {
-      echo '<tr>';
-      foreach ($aTeatro as $key2 => $value2) {
-      if ($aTeatro[$key][$key2] != null) {
-      echo '<td id="td1">' . $aTeatro[$key][$key2] . '</td>';
-      } else {
-      echo '<td id="td2">vacio</td>';
-      }
-      }
-      echo '</tr>';
-      }
-      echo '</table>'; */
+    echo '<h3>Reccorer el Array usando foreach()</h3>';
+    echo '<table border="2px">';
+    foreach ($aTeatro as $fila => $aAsientos) {
+        echo '<tr>';
+        foreach ($aAsientos as $Asiento =>$persona) {
+            if ($persona != null) {
+                echo '<td id="td1">' . $persona . '</td>';
+            } else {
+                echo '<td id="td2">vacio</td>';
+            }
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
     //usar foreach() {
     echo '<h3>Reccorer el Array usando while()</h3>';
     echo '<table border="2px">';
@@ -80,11 +80,11 @@
             if ($aTeatro[$filas][$asientos] != null) {
                 echo '<td id="td1">' . $aTeatro[$filas][$asientos] . '</td>';
             } else {
-               echo '<td id="td2">Fila '.$aFilas.' asiento '.$aAsientos.' </td>';
+                echo '<td id="td2">Fila ' . $fila . ' asiento ' . $asiento . ' </td>';
             }
             $asientos++;
         }
-         echo '</tr>';
+        echo '</tr>';
         $filas++;
     }
     ?>

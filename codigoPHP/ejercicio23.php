@@ -19,9 +19,13 @@
         <link rel="icon" href="../webroot/media/img/fav.png" type="image/ico" sizes="16x16">
     </head>
    <?php 
+   //comprobar si ha pulsado el button enviar y el nombre con la altura no estan vacios
    if (isset($_POST['submitbtn']) && !empty($_POST['nombre']) && !empty($_POST['altura'])) {
+       //coger el nombre
         $nombre = $_POST['nombre'];
+         //coger el la altura
         $altura = $_POST['altura'];
+        //mostarar los datos
         echo 'El nombre introducido  <strong> ' . $nombre . '</strong><br>';
         echo 'Y la altura es :  <strong> ' . $altura . '</strong> <br><br>';
         echo 'El contenido de $_REQUEST : <pre>';

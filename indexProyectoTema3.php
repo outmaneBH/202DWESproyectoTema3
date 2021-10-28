@@ -140,6 +140,11 @@
                     <td><a href="codigoPHP/ejercicio24.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio24.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
                 </tr>
+                <tr>
+                    <td>25. Trabajar en PlantillaFormulario.php mi plantilla para hacer formularios como churros.</td>
+                    <td><a href="codigoPHP/ejercicio25.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                    <td><a href="mostrarcodigo/muestraEjercicio25.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+                </tr>
             </table>
 
         </div>

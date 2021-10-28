@@ -1,13 +1,19 @@
 .w3-container{
     margin: 50px;
-    width: 350px;
+    width: 50%;
     position: relative;
-    left: 32%;
+    left: 27%;
     border: 1px solid red;
     border-radius:  5px;
 }
+
 form{
     padding: 30px;
+}
+label{
+    font-family: monospace;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 
