@@ -24,7 +24,7 @@
       distintas técnicas (foreach(), while(), for()) para mostrar los asientos ocupados en cada fila y las personas que lo ocupan
      */
     /*     * inicializamos el array ocupando únicamente 5 asientos */
-
+//hay que añadir comentarios
     /** Recorrer el array con distintas técnicas */
     for ($aFila = 1; $aFila <= 20; $aFila++) {
         for ($aAsiento = 1; $aAsiento <= 15; $aAsiento++) {
