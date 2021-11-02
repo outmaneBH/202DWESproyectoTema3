@@ -115,6 +115,20 @@
                     <td><a href="codigoPHP/ejercicio17.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio17.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
                 </tr>
+                 <tr>
+                    <td> 17. Inicializar un array (bidimensional con dos índices numéricos) donde almacenamos el nombre de las personas que tienen reservado el
+                        asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con
+                        distintas técnicas (foreach(), while(), for()) para mostrar los asientos ocupados en cada fila y las personas que lo ocupan.</td>
+                    <td><a href="codigoPHP/ejercicio17.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                    <td><a href="mostrarcodigo/muestraEjercicio17.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+                </tr>
+                <tr>
+                    <td>19. Construir una librería de funciones de validación de campos de formularios (LibreríaValidacionFormularios.php) para utilizarla en los
+siguientes ejercicios. Discusión: diferencia entre librería de funciones y clase.</td>
+                    <td><a href="codigoPHP/ejercicio19.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                    <td><a href="mostrarcodigo/muestraEjercicio19.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+                </tr>
+                
                 <tr>
                     <td> 21. Construir un formulario para recoger un cuestionario realizado a una persona y enviarlo a una página Tratamiento.php para que muestre
                         las preguntas y las respuestas recogidas.</td>

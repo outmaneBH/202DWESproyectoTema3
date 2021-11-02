@@ -94,19 +94,12 @@
         $aErrores["opemail"] = validacionFormularios::validarEmail($_REQUEST['opemail'], OPCIONAL);
 
         //Comprobar si el campo radio esta checked
-        if(isset($_REQUEST['gender']))
-        {
-            $gender=$_REQUEST['gender'];
-            $aErrores["gender"] = validacionFormularios::comprobarAlfabetico($gender,200,1, OBLIGATORIO);
-            
+        if (isset($_REQUEST['gender'])) {
+            $gender = $_REQUEST['gender'];
+            $aErrores["gender"] = validacionFormularios::comprobarAlfabetico($gender, 200, 1, OBLIGATORIO);
         }
-            
-        
-        
-         /*  $aErrores["opgender"] = validacionFormularios::comprobarAlfabetico($_REQUEST['opgender'], OPCIONAL); */
 
-
-
+        /*  $aErrores["opgender"] = validacionFormularios::comprobarAlfabetico($_REQUEST['opgender'], OPCIONAL); */
 
 //recorrer el array de errores
         foreach ($aErrores as $nombreCampo => $value) {
@@ -162,71 +155,91 @@
         ?>
         <div >
             <fieldset>
-                <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+                <table>
+                    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+                        <tr>
+                            <!--El campo alfabetico obligatorio -->
+                            <td><label>Campo alfabetico (*)   :</label></td>
+                            <td> <input type="text" name="alfabetico" value="<?php echo (isset($_REQUEST['alfabetico']) ? $_REQUEST['alfabetico'] : null); ?>"/></td>
+                            <td><span><?php echo ($aErrores["alfabetico"] != null ? $aErrores['alfabetico'] : null); ?></span></td>
+                        </tr>
+                        <!--El campo alfabetico opcional -->
+                        <tr>
+                            <td> <label>Campo alfabetico :</label> 
+                            <td> <input type="text"  name="opalfabetico" value="<?php echo (isset($_REQUEST['opalfabetico']) ? $_REQUEST['opalfabetico'] : null); ?>"/></td>
+                            <td> <span><?php echo ($aErrores["opalfabetico"] != null ? $aErrores['opalfabetico'] : null); ?></span></td>
+                        </tr>
 
-                    <!--El campo alfabetico obligatorio -->
-                    <label>Campo alfabetico (*)   :</label>
-                    <input type="text" name="alfabetico" value="<?php echo (isset($_REQUEST['alfabetico']) ? $_REQUEST['alfabetico'] : null); ?>"/>
-                    <span><?php echo ($aErrores["alfabetico"] != null ? $aErrores['alfabetico'] : null); ?></span><br>
-                    <!--El campo alfabetico opcional -->
-                    <label>Campo alfabetico :</label> 
-                    <input type="text"  name="opalfabetico" value="<?php echo (isset($_REQUEST['opalfabetico']) ? $_REQUEST['opalfabetico'] : null); ?>"/>
-                    <span><?php echo ($aErrores["opalfabetico"] != null ? $aErrores['opalfabetico'] : null); ?></span><br>
+                        <!--El campo entero obligatorio -->
+                        <tr>
+                            <td><label>Campo entero (*)   :</label></td>
+                            <td><input type="text"  name="entero" value="<?php echo (isset($_REQUEST['entero']) ? $_REQUEST['entero'] : null); ?>"/></td>
+                            <td><span><?php echo ($aErrores["entero"] != null ? $aErrores['entero'] : null); ?></span></td>
+                        </tr>
+                        <!--El campo entero opcional -->
+                        <tr>
+                            <td><label>Campo entero     :</label>
+                            <td><input type="text"  name="opentero" value="<?php echo (isset($_REQUEST['opentero']) ? $_REQUEST['opentero'] : null); ?>"/>
+                            <td><span><?php echo ($aErrores["opentero"] != null ? $aErrores['opentero'] : null); ?></span><br>
+                        <Ttr>
+
+                            <!--El campo float -->
+                            <tr>
+                                <td> <label>Campo float (*) :</label></td>
+                                <td> <input type="text"  name="float" value="<?php echo (isset($_REQUEST['float']) ? $_REQUEST['float'] : null); ?>"/></td>
+                                <td> <span><?php echo ($aErrores["float"] != null ? $aErrores['float'] : null); ?></span></td>
+                            </tr>
+                            <!--El campo float opcional -->
+                            <tr>
+                                <td><label>Campo float  :</label></td>
+                                <td>  <input type="text"  name="opfloat" value="<?php echo (isset($_REQUEST['opfloat']) ? $_REQUEST['opfloat'] : null); ?>"/></td>
+                                <td> <span><?php echo ($aErrores["opfloat"] != null ? $aErrores['opfloat'] : null); ?> </span></td>
+                            </tr>
 
 
-                    <!--El campo entero obligatorio -->
-                    <label>Campo entero (*)   :</label>
-                    <input type="text"  name="entero" value="<?php echo (isset($_REQUEST['entero']) ? $_REQUEST['entero'] : null); ?>"/>
-                    <span><?php echo ($aErrores["entero"] != null ? $aErrores['entero'] : null); ?></span><br>
-                    <!--El campo entero opcional -->
-                    <label>Campo entero     :</label>
-                    <input type="text"  name="opentero" value="<?php echo (isset($_REQUEST['opentero']) ? $_REQUEST['opentero'] : null); ?>"/>
-                    <span><?php echo ($aErrores["opentero"] != null ? $aErrores['opentero'] : null); ?></span><br>
+                            <!--El campo date -->
+                            <tr>
+                                <td> <label>Campo date (*) :</label></td>
+                                <td> <input type="text"  name="date" value="<?php echo (isset($_REQUEST['date']) ? $_REQUEST['date'] : null); ?>"/></td>
+                                <td><span><?php echo ($aErrores["date"] != null ? $aErrores['date'] : null); ?></span></td>
+                            </tr>
+                            <!--El campo date opcional -->
+                            <tr>
+                                <td> <label>Campo date :</label></td>
+                                <td>  <input type="text"  name="opdate" value="<?php echo (isset($_REQUEST['opdate']) ? $_REQUEST['opdate'] : null); ?>"/></td>
+                                <td> <span><?php echo ($aErrores["opdate"] != null ? $aErrores['opdate'] : null); ?></span></td>
 
-
-                    <!--El campo float -->
-                    <label>Campo float (*) :</label>
-                    <input type="text"  name="float" value="<?php echo (isset($_REQUEST['float']) ? $_REQUEST['float'] : null); ?>"/>
-                    <span><?php echo ($aErrores["float"] != null ? $aErrores['float'] : null); ?></span><br>
-                    <!--El campo float opcional -->
-                    <label>Campo float  :</label>
-                    <input type="text"  name="opfloat" value="<?php echo (isset($_REQUEST['opfloat']) ? $_REQUEST['opfloat'] : null); ?>"/>
-                    <span><?php echo ($aErrores["opfloat"] != null ? $aErrores['opfloat'] : null); ?> </span><br> 
-
-
-
-                    <!--El campo date -->
-                    <label>Campo date (*) :</label>
-                    <input type="text"  name="date" value="<?php echo (isset($_REQUEST['date']) ? $_REQUEST['date'] : null); ?>"/>
-                    <span><?php echo ($aErrores["date"] != null ? $aErrores['date'] : null); ?></span><br>
-                    <!--El campo date opcional -->
-                    <label>Campo date :</label>
-                    <input type="text"  name="opdate" value="<?php echo (isset($_REQUEST['opdate']) ? $_REQUEST['opdate'] : null); ?>"/>
-                    <span><?php echo ($aErrores["opdate"] != null ? $aErrores['opdate'] : null); ?></span><br>
-
-
-                    <!--El campo email -->
-                    <label>Campo email (*) :</label>
-                    <input type="email"  name="email" value="<?php echo (isset($_REQUEST['email']) ? $_REQUEST['email'] : null); ?>"/>
-                    <span><?php echo ($aErrores["email"] != null ? $aErrores['email'] : null); ?></span><br>
-                    <!--El campo email opcional -->
-                    <label>Campo email :</label>
-                    <input type="email"  name="opemail" value="<?php echo (isset($_REQUEST['opemail']) ? $_REQUEST['opemail'] : null); ?>"/>
-                    <span><?php echo ($aErrores["opemail"] != null ? $aErrores['opemail'] : null); ?></span><br>
-
-                    <!--El campo radio-->
-                    <label>Campo radio (*) :</label>
-                    <input type="radio"  name="gender"  <?php if (isset($_REQUEST['gender']) && $_REQUEST['gender'] == "hombre") echo "checked"; ?> value="hombre" >Hombre
-                    <input type="radio"  name="gender"  <?php if (isset($_REQUEST['gender']) && $_REQUEST['gender'] == "mujer") echo "checked"; ?> value="mujer" >Mujer
-                    <span><?php echo ($aErrores["gender"] != null ? $aErrores['gender'] : null); ?></span><br>
-                    <br>
-                    <!--El campo radio opcional -->
-                    <label>Campo radio :</label>
-                     <input type="radio"  name="opgender"  <?php if (isset($_REQUEST['opgender']) && $_REQUEST['opgender'] == "hombre") echo "checked"; ?> value="hombre" >Hombre
-                     <input type="radio"  name="opgender"  <?php if (isset($_REQUEST['opgender']) && $_REQUEST['opgender'] == "mujer") echo "checked"; ?> value="mujer" >Mujer
-                     <br>
-                    <input type="submit" class="w3-btn w3-teal" name="submitbtn" value="Enviar datos"/>
-                </form>
+                            </tr>
+                            <!--El campo email -->
+                            <tr>
+                                <td> <label>Campo email (*) :</label></td>
+                                <td> <input type="email"  name="email" value="<?php echo (isset($_REQUEST['email']) ? $_REQUEST['email'] : null); ?>"/></td>
+                                <td>  <span><?php echo ($aErrores["email"] != null ? $aErrores['email'] : null); ?></span></td>
+                            </tr>
+                            <!--El campo email opcional -->
+                            <tr>
+                                <td><label>Campo email :</label></td>
+                                <td>  <input type="email"  name="opemail" value="<?php echo (isset($_REQUEST['opemail']) ? $_REQUEST['opemail'] : null); ?>"/></td>
+                                <td>  <span><?php echo ($aErrores["opemail"] != null ? $aErrores['opemail'] : null); ?></span></td>
+                            </tr>
+                            <!--El campo radio-->
+                            <tr>
+                                <td>  <label>Campo radio (*) :</label>
+                                <td> <input type="radio"  name="gender"  <?php if (isset($_REQUEST['gender']) && $_REQUEST['gender'] == "hombre") echo "checked"; ?> value="hombre" >Hombre</td>
+                                <td> <input type="radio"  name="gender"  <?php if (isset($_REQUEST['gender']) && $_REQUEST['gender'] == "mujer") echo "checked"; ?> value="mujer" >Mujer</td>
+                                <td> <span><?php echo ($aErrores["gender"] != null ? $aErrores['gender'] : null); ?></span></td>
+                            </tr>
+                            <!--El campo radio opcional -->
+                            <tr><td>  <label>Campo radio :</label></td>
+                                <td> <input type="radio"  name="opgender"  <?php if (isset($_REQUEST['opgender']) && $_REQUEST['opgender'] == "hombre") echo "checked"; ?> value="hombre" >Hombre</td>
+                                <td> <input type="radio"  name="opgender"  <?php if (isset($_REQUEST['opgender']) && $_REQUEST['opgender'] == "mujer") echo "checked"; ?> value="mujer" >Mujer</td>
+                            </tr>
+                            <tr> 
+                                <td><input type="submit" class="w3-btn w3-teal" name="submitbtn" value="Enviar datos"/></td>
+                                <td><input type="reset" class="w3-btn w3-red" name="resetbtn" value="Borrar datos"/></td>
+                        </tr>
+                    </form>
+                </table>
             </fieldset>
         </div>
         <?php
