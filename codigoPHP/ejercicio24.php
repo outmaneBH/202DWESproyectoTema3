@@ -43,172 +43,169 @@
     </head>
     <body>
 
-    </body>
-</html>
-<?php
-//usar la libreria de validacion
-require_once '../core/210322ValidacionFormularios.php';
 
-//definir un variable constante obligatorio a 1
-define("OBLIGATORIO", 1);
-define("OPCIONAL", 0);
-define("FECHAMAXIMA", "01/01/2080");
-define("FECHAMINIMA", "01/01/1940");
+        <?php
+        /* usar la libreria de validacion */
+        require_once '../core/210322ValidacionFormularios.php';
+
+        /* definir un variable constante obligatorio a 1 y opcionales a 0 */
+        define("OBLIGATORIO", 1);
+        define("OPCIONAL", 0);
+        define("FECHAMAXIMA", "01/01/2080");
+        define("FECHAMINIMA", "01/01/1940");
 
 
-//Varible de entrada correcta inicializada a true
-$entradaOK = true;
+        /* Varible de entrada correcta inicializada a true */
+        $entradaOK = true;
 
-//definir un array para alamcenar errores del nombre y la altura
-$aErrores = ["name" => null,
-    "surname" => null,
-    "age" => null,
-    "date_of_birth" => null,
-    "address" => null,
-    "phone" => null,
-    "height" => null,
-    "salary" => null
-];
+        /* definir un array para alamcenar errores del nombre y la altura */
+        $aErrores = ["name" => null,
+            "surname" => null,
+            "age" => null,
+            "date_of_birth" => null,
+            "address" => null,
+            "phone" => null,
+            "height" => null,
+            "salary" => null
+        ];
 
-//Array de respuestas inicializado a null
-$aRespuestas = ["name" => null,
-    "surname" => null,
-    "age" => null,
-    "date_of_birth" => null,
-    "address" => null,
-    "phone" => null,
-    "height" => null,
-    "salary" => null
-];
+        /* Array de respuestas inicializado a null */
+        $aRespuestas = ["name" => null,
+            "surname" => null,
+            "age" => null,
+            "date_of_birth" => null,
+            "address" => null,
+            "phone" => null,
+            "height" => null,
+            "salary" => null
+        ];
 
-//comprobar si ha pulsado el button enviar 
-if (isset($_REQUEST['submitbtn'])) {
-    //Para cada campo del formulario: Validar entrada y actuar en consecuencia
-    //Validar entrada
-    //Comprobar si el campo name esta rellenado
-    $aErrores["name"] = validacionFormularios::comprobarAlfabetico($_REQUEST['name'], 200, 1, OBLIGATORIO);
+        /* comprobar si ha pulsado el button enviar */
+        if (isset($_REQUEST['submitbtn'])) {
+            //Para cada campo del formulario: Validar entrada y actuar en consecuencia
+            //Validar entrada
+            //Comprobar si el campo name esta rellenado
+            $aErrores["name"] = validacionFormularios::comprobarAlfabetico($_REQUEST['name'], 200, 1, OBLIGATORIO);
 
-    //Comprobar si el campo surname  esta rellenado 
-    $aErrores["surname"] = validacionFormularios::comprobarAlfabetico($_REQUEST['surname'], 200, 1, OBLIGATORIO);
+            //Comprobar si el campo surname  esta rellenado 
+            $aErrores["surname"] = validacionFormularios::comprobarAlfabetico($_REQUEST['surname'], 200, 1, OBLIGATORIO);
 
-    //Comprobar si el campo age esta rellenado
-    $aErrores["age"] = validacionFormularios::comprobarEntero($_REQUEST['age'], 150, 1, OBLIGATORIO);
+            //Comprobar si el campo age esta rellenado
+            $aErrores["age"] = validacionFormularios::comprobarEntero($_REQUEST['age'], 150, 1, OBLIGATORIO);
 
-    //Comprobar si el campo date_of_birth  esta rellenado
-    $aErrores["date_of_birth"] = validacionFormularios::validarFecha($_REQUEST['date_of_birth'], FECHAMAXIMA, FECHAMINIMA, OBLIGATORIO);
+            //Comprobar si el campo date_of_birth  esta rellenado
+            $aErrores["date_of_birth"] = validacionFormularios::validarFecha($_REQUEST['date_of_birth'], FECHAMAXIMA, FECHAMINIMA, OBLIGATORIO);
 
-    //Comprobar si el campo address esta rellenado
-    $aErrores["address"] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['address'], 2000, 1, OBLIGATORIO);
+            //Comprobar si el campo address esta rellenado
+            $aErrores["address"] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['address'], 2000, 1, OBLIGATORIO);
 
-    //Comprobar si el campo phone  esta rellenado
-    $aErrores["phone"] = validacionFormularios::validarTelefono($_REQUEST['phone'], OBLIGATORIO);
+            //Comprobar si el campo phone  esta rellenado
+            $aErrores["phone"] = validacionFormularios::validarTelefono($_REQUEST['phone'], OBLIGATORIO);
 
-    //Comprobar si el campo height  esta rellenado */
-    $aErrores["height"] = validacionFormularios::comprobarEntero($_REQUEST['height'], 250, 1, OBLIGATORIO);
+            //Comprobar si el campo height  esta rellenado */
+            $aErrores["height"] = validacionFormularios::comprobarEntero($_REQUEST['height'], 250, 1, OBLIGATORIO);
 
-    //Comprobar si el campo salary  esta rellenado */
-    $aErrores["salary"] = validacionFormularios::comprobarFloat($_REQUEST['salary'], 5000, 20, OBLIGATORIO);
+            //Comprobar si el campo salary  esta rellenado */
+            $aErrores["salary"] = validacionFormularios::comprobarFloat($_REQUEST['salary'], 5000, 20, OBLIGATORIO);
 
-//recorrer el array de errores
-    foreach ($aErrores as $nombreCampo => $value) {
-        //Comprobar si el campo ha sido rellenado
-        if ($value != null) {
-            $_REQUEST[$nombreCampo] = "";
-            // cuando encontremos un error
+            /* recorrer el array de errores */
+            foreach ($aErrores as $nombreCampo => $value) {
+                //Comprobar si el campo ha sido rellenado
+                if ($value != null) {
+                    $_REQUEST[$nombreCampo] = "";
+                    // cuando encontremos un error
+                    $entradaOK = false;
+                }
+            }
+        } else {
+            //El formulario no se ha rellenado nunca
             $entradaOK = false;
         }
-    }
-} else {
-    //El formulario no se ha rellenado nunca
-    $entradaOK = false;
-}
-if ($entradaOK) {
-    //Tratamiento del formulario - Tratamiento de datos OK
-    //Si los datos estan correctos
+        if ($entradaOK) {
+            //Tratamiento del formulario - Tratamiento de datos OK
+            //Si los datos estan correctos
 
-    $aRespuestas = ["name" => $_REQUEST['name'],
-        "surname" => $_REQUEST['surname'],
-        "age" => $_REQUEST['age'],
-        "date_of_birth" => $_REQUEST['date_of_birth'],
-        "address" => $_REQUEST['address'],
-        "phone" => $_REQUEST['phone'],
-        "height" => $_REQUEST['height'],
-        "salary" => $_REQUEST['salary'],
-    ];
+            $aRespuestas = ["name" => $_REQUEST['name'],
+                "surname" => $_REQUEST['surname'],
+                "age" => $_REQUEST['age'],
+                "date_of_birth" => $_REQUEST['date_of_birth'],
+                "address" => $_REQUEST['address'],
+                "phone" => $_REQUEST['phone'],
+                "height" => $_REQUEST['height'],
+                "salary" => $_REQUEST['salary'],
+            ];
 
 
-    //Mostrar los datos correctos
-    echo "<div> <h3>Tus datos que has introducido :</h3> <span>Nombre   : </span><strong> " . $aRespuestas['name'] . "</strong><br>";
-    echo "<span>Apellidos   :</span><strong> " . $aRespuestas['surname'] . "</strong><br>";
-    echo "<span>Edad   : </span><strong> " . $aRespuestas['age'] . "</strong><br>";
-    echo "<span>Fecha de nacimiento   :</span> <strong> " . $aRespuestas['date_of_birth'] . "</strong><br>";
-    echo "<span>Direccion   :</span><strong>  " . $aRespuestas['address'] . "</strong><br>";
-    echo "<span>Telefono   :</span> <strong> " . $aRespuestas['phone'] . "</strong><br>";
-    echo "<span>Altura   :</span> <strong> " . $aRespuestas['height'] . "</strong><br>";
-    echo "<span>Sueldo   :</span> <strong> " . $aRespuestas['salary'] . " €</strong><br></div>";
-} else {
-    //Mostrar el formulario hasta que lo rellenemos correctamente
-    //Mostrar formulario
-    ?>
+            //Mostrar los datos correctos
+            echo "<div> <h3>Tus datos que has introducido :</h3> <span>Nombre   : </span><strong> " . $aRespuestas['name'] . "</strong><br>";
+            echo "<span>Apellidos   :</span><strong> " . $aRespuestas['surname'] . "</strong><br>";
+            echo "<span>Edad   : </span><strong> " . $aRespuestas['age'] . "</strong><br>";
+            echo "<span>Fecha de nacimiento   :</span> <strong> " . $aRespuestas['date_of_birth'] . "</strong><br>";
+            echo "<span>Direccion   :</span><strong>  " . $aRespuestas['address'] . "</strong><br>";
+            echo "<span>Telefono   :</span> <strong> " . $aRespuestas['phone'] . "</strong><br>";
+            echo "<span>Altura   :</span> <strong> " . $aRespuestas['height'] . "</strong><br>";
+            echo "<span>Sueldo   :</span> <strong> " . $aRespuestas['salary'] . " €</strong><br></div>";
+        } else {
+            //Mostrar el formulario hasta que lo rellenemos correctamente
+            //Mostrar formulario
+            ?>
 
-    <div class="w3-container">
-        <h3>Formulario</h3>
-        
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-                <!--El campo name obligatorio -->
-                <label>Cual es tu nombre :</label><br>
-                <input type="text" class="w3-input" name="name" value="<?php echo (isset($_REQUEST['name']) ? $_REQUEST['name'] : null); ?>"/>
-                <span><?php echo ($aErrores["name"] != null ? $aErrores['name'] : null); ?></span><br>
-               
+            <div class="w3-container">
+                <h3>Formulario</h3>
 
-                <!--El campo surname  -->
-
-                <label>Cual es tu apellido :</label><br>
-                <input type="text" class="w3-input" name="surname" value="<?php echo (isset($_REQUEST['surname']) ? $_REQUEST['surname'] : null); ?>" /> 
-                <span><?php echo ($aErrores["surname"] != null ? $aErrores['surname'] : null) ?></span><br>
+                <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+                    <!--El campo name obligatorio -->
+                    <label>Cual es tu nombre :</label><br>
+                    <input type="text" class="w3-input" name="name" value="<?php echo (isset($_REQUEST['name']) ? $_REQUEST['name'] : null); ?>"/>
+                    <span><?php echo ($aErrores["name"] != null ? $aErrores['name'] : null); ?></span><br>
 
 
-                <!--El campo age -->  
-                <label>La edad :</label><br>
-                <input type="text" class="w3-input" name="age" value="<?php echo (isset($_REQUEST['age']) ? $_REQUEST['age'] : null); ?>" /> 
-                <span><?php echo ($aErrores["age"] != null ? $aErrores['age'] : null) ?></span><br>
+                    <!--El campo surname  -->
 
-                <!--El campo date_of_birth -->  
-                <label>La fecha de nacimiento :</label><br>
-                <input type="text" class="w3-input" placeholder="dd/mm/yyyy" name="date_of_birth"  value="<?php echo (isset($_REQUEST['date_of_birth']) ? $_REQUEST['date_of_birth'] : null); ?>" /> 
-                <span><?php echo ($aErrores["date_of_birth"] != null ? $aErrores['date_of_birth'] : null); ?></span><br>
+                    <label>Cual es tu apellido :</label><br>
+                    <input type="text" class="w3-input" name="surname" value="<?php echo (isset($_REQUEST['surname']) ? $_REQUEST['surname'] : null); ?>" /> 
+                    <span><?php echo ($aErrores["surname"] != null ? $aErrores['surname'] : null) ?></span><br>
 
 
-                <!--El campo address -->  
-                <label>La direccion :</label><br>
-                <input type="text" class="w3-input" name="address"  value="<?php echo (isset($_REQUEST['address']) ? $_REQUEST['address'] : null) ?>" /> 
-                <span><?php echo ($aErrores["address"] != null ? $aErrores['address'] : null) ?></span><br>
+                    <!--El campo age -->  
+                    <label>La edad :</label><br>
+                    <input type="text" class="w3-input" name="age" value="<?php echo (isset($_REQUEST['age']) ? $_REQUEST['age'] : null); ?>" /> 
+                    <span><?php echo ($aErrores["age"] != null ? $aErrores['age'] : null) ?></span><br>
 
-                <!--El campo phone -->  
-                <label>El telefono :</label><br>
-                <input type="text" class="w3-input" name="phone"  value="<?php echo (isset($_REQUEST['phone']) ? $_REQUEST['phone'] : null); ?>" /> 
-                <span><?php echo ($aErrores["phone"] != null ? $aErrores['phone'] : null); ?></span><br>
+                    <!--El campo date_of_birth -->  
+                    <label>La fecha de nacimiento :</label><br>
+                    <input type="text" class="w3-input" placeholder="dd/mm/yyyy" name="date_of_birth"  value="<?php echo (isset($_REQUEST['date_of_birth']) ? $_REQUEST['date_of_birth'] : null); ?>" /> 
+                    <span><?php echo ($aErrores["date_of_birth"] != null ? $aErrores['date_of_birth'] : null); ?></span><br>
 
-                <!--El campo height -->  
-                <label>Cual es tu altura en (cm) :</label><br>
-                <input type="text" class="w3-input" name="height" value="<?php echo (isset($_REQUEST['height']) ? $_REQUEST['height'] : null); ?>" /> 
-                <span><?php echo ($aErrores["height"] != null ? $aErrores['height'] : null); ?></span><br>
 
-                <!--El campo salary -->  
-                <label>Cual es tu sueldo en € :</label><br>
-                <input type="text" class="w3-input" name="salary" value="<?php echo (isset($_REQUEST['salary']) ? $_REQUEST['salary'] : null); ?>" /> 
-                <span><?php echo ($aErrores["salary"] != null ? $aErrores['salary'] : null); ?></span><br>
+                    <!--El campo address -->  
+                    <label>La direccion :</label><br>
+                    <input type="text" class="w3-input" name="address"  value="<?php echo (isset($_REQUEST['address']) ? $_REQUEST['address'] : null) ?>" /> 
+                    <span><?php echo ($aErrores["address"] != null ? $aErrores['address'] : null) ?></span><br>
 
-                <input type="submit" class="w3-button w3-white w3-border w3-border-blue" name="submitbtn" value="Enviar datos"/>
-            </form>
-       
-        
-    </div>
-    <?php
-}
-?>
-<body>
-</body>
+                    <!--El campo phone -->  
+                    <label>El telefono :</label><br>
+                    <input type="text" class="w3-input" name="phone"  value="<?php echo (isset($_REQUEST['phone']) ? $_REQUEST['phone'] : null); ?>" /> 
+                    <span><?php echo ($aErrores["phone"] != null ? $aErrores['phone'] : null); ?></span><br>
+
+                    <!--El campo height -->  
+                    <label>Cual es tu altura en (cm) :</label><br>
+                    <input type="text" class="w3-input" name="height" value="<?php echo (isset($_REQUEST['height']) ? $_REQUEST['height'] : null); ?>" /> 
+                    <span><?php echo ($aErrores["height"] != null ? $aErrores['height'] : null); ?></span><br>
+
+                    <!--El campo salary -->  
+                    <label>Cual es tu sueldo en € :</label><br>
+                    <input type="text" class="w3-input" name="salary" value="<?php echo (isset($_REQUEST['salary']) ? $_REQUEST['salary'] : null); ?>" /> 
+                    <span><?php echo ($aErrores["salary"] != null ? $aErrores['salary'] : null); ?></span><br>
+
+                    <input type="submit" class="w3-button w3-white w3-border w3-border-blue" name="submitbtn" value="Enviar datos"/>
+                </form>
+
+            </div>
+            <?php
+        }
+        ?>
+    </body>
 </html> 
 
 

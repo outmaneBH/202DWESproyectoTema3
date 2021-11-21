@@ -12,6 +12,5 @@ if(isset($_POST['submitbtn']))
      
      echo 'El contenido de $_POST : <pre>';
     print_r($_POST);
-     echo '</pre>';
-    
+     echo '</pre>';  
 }

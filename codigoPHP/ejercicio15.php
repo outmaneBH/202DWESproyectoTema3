@@ -3,8 +3,7 @@
 
     <head>
         <style>
-
-            table{
+         table{
                 border-collapse: collapse; 
                 width: 30%;
                 text-align: center;
