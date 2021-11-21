@@ -20,6 +20,7 @@
 
 
     </head>
+     <body>
     <?php
     if (isset($_POST['submitbtn'])) {
         $nombre = $_POST['nombre'];
@@ -49,7 +50,7 @@
         <?php } ?>
     </form>
 
-    <body>
+   
     </body>
 </html>
 

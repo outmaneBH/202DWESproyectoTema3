@@ -9,11 +9,9 @@
         <link rel="icon" href="../webroot/media/img/fav.png" type="image/ico" sizes="16x16">
         <link rel="stylesheet" type="text/css" href="../webroot/css/proyectoTema3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-       
+
     </head>
-
     <body>
-
         <div class="w3-container">
             <div class="w3-bar w3-black">
                 <a href="/index.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue" style="width:33%">Home</a>
@@ -107,7 +105,12 @@
                     <td><a href="codigoPHP/ejercicio15.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio15.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
                 </tr>
-               
+
+                <tr>
+                    <td> 16. Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</td>
+                    <td><a href="codigoPHP/ejercicio16.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                    <td><a href="mostrarcodigo/muestraEjercicio16.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+                </tr>
                 <tr>
                     <td> 17. Inicializar un array (bidimensional con dos índices numéricos) donde almacenamos el nombre de las personas que tienen reservado el
                         asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con
@@ -115,6 +118,13 @@
                     <td><a href="codigoPHP/ejercicio17.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio17.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
                 </tr>
+                <tr>
+                    <td>19. Construir una librería de funciones de validación de campos de formularios (LibreríaValidacionFormularios.php) para utilizarla en los
+                        siguientes ejercicios. Discusión: diferencia entre librería de funciones y clase.</td>
+                    <td><a href="codigoPHP/ejercicio19.php"><img src="../webroot/media/img/Tema3/run.png" alt="runIcon"></a></td>
+                    <td><a href="mostrarcodigo/muestraEjercicio19.php"><img src="../webroot/media/img/Tema3/codigo.png" alt="runIcon"></a></td>
+                </tr>
+
                 <tr>
                     <td> 21. Construir un formulario para recoger un cuestionario realizado a una persona y enviarlo a una página Tratamiento.php para que muestre
                         las preguntas y las respuestas recogidas.</td>
@@ -153,7 +163,7 @@
         </div>
         <footer> 
             <p>Copyrights © 2021 OUTMANE BOUHOU. All rights reserved.</p>
-            <a href="https://github.com/outmaneBH/proyectoTema3" target="_blank" ><img id="git" src="../webroot/media/img/git.png" alt="Github"/></a>
+            <a href="https://github.com/outmaneBH/202DWESproyectoTema3" target="_blank" ><img id="git" src="../webroot/media/img/git.png" alt="Github"/></a>
         </footer>
     </body>
 

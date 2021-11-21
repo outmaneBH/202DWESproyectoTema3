@@ -9,10 +9,13 @@
 
 /* Mostrar el contenido de las variables superglobales (utilizando print_r() y foreach()). */
 
-// El contenido de $_SERVER
+/* El contenido de $_SERVER */
+
+/* usando foreach() */
 echo '<h3>Mostrar el contenido de $_SERVER :</h3>  ';
 echo '<h4>Con foreach :</4>  ';
 echo '<table><tr><th>Clave</th><th>Valor</th></th>';
+/* usando foreach() */
 foreach ($_SERVER as $Clave => $Valor) {
     echo '<tr>';
     echo "<td>$Clave</td>";
@@ -20,11 +23,12 @@ foreach ($_SERVER as $Clave => $Valor) {
     echo '</tr>';
 }
 echo '</table>';
-
+/* usando print_r() */
 echo '<h4>Con print_r :</h4>  ';
 echo '<pre>';
 print_r($_SERVER);
 echo '</pre>';
+
 // El contenido de $GLOBALS
 echo '<h3>Mostrar el contenido de $GLOBALS :</h3>  ';
 echo '<h4>Con foreach :</4>  ';
@@ -32,7 +36,6 @@ echo '<table><tr><th>Clave</th></th>';
 foreach ($GLOBALS as $Clave => $Valor) {
     echo '<tr>';
     echo "<td>$Clave</td>";
-  
     echo '</tr>';
 }
 echo '</table>';
