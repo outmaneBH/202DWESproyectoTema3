@@ -37,6 +37,7 @@
     } else {
         ?>
         <div class="w3-container">
+            <h4>Formulario para recoger cuestionario </h4>
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
                 <label>Cual es tu nombre :</label><br>
                 <input type="text" class="w3-input" name="nombre"/><br><br>

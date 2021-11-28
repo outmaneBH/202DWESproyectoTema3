@@ -15,7 +15,7 @@ echo 'Hoy es '.$oFechaesp->format('l').",".$oFechaesp->format('d')." de " .$oFec
 //La fecha y hora de Marruecos
 echo '<h3>La fecha y Hora de Marruecos</h3>';
 $oFechamar = new DateTime(null,new DateTimeZone('Africa/Casablanca'));
-echo 'Hoy es '.$oFechamar->format('d')." de " .$oFechamar->format('F')." del ".$oFechamar->format('Y')." y La hora es : ".$oFechamar->format('H:i');
+echo 'Hoy es '.$oFechaesp->format('l').",".$oFechaesp->format('d')." de " .$oFechaesp->format('F')." del ".$oFechaesp->format('Y')." y La hora es : ".$oFechaesp->format('H:i');
 
 //La fecha y hora de Portugal
 echo '<h3>La fecha y Hora de Portugal</h3>';

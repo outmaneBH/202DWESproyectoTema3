@@ -20,6 +20,7 @@
 
     </head>
     <div class="w3-container">
+        <h3>Formulario para recoger cuestionario :</h3>
         <form action="tratamiento.php" method="POST">
         <label>Cual es tu nombre :</label><br>
         <input type="text" class="w3-input" name="nombre"/><br><br>

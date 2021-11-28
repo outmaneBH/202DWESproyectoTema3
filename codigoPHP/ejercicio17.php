@@ -41,7 +41,7 @@
     $aTeatro[8][14] = "Nombre5";
 
     //Reccorer el Array usando for() $fila recoree las filas y $Asiento los asientos
-    echo '<h3>Reccorer el Array usando for()</h3>';
+    echo '<h2 style="color:blue;"> las personas que tienen reservado el asiento en un teatro :</h2><h3>Reccorer el Array usando for()</h3>';
     echo '<table border="2px">';
     for ($fila = 1; $fila <= 20; $fila++) {
         echo '<tr>';

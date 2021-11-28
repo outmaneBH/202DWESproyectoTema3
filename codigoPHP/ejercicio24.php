@@ -151,7 +151,7 @@
             ?>
 
             <div class="w3-container">
-                <h3>Formulario</h3>
+               <h4>Formulario con Validacion de Campos: </h4>
 
                 <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
                     <!--El campo name obligatorio -->

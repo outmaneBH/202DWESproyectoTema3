@@ -15,11 +15,9 @@
         <div class="w3-container">
             <div class="w3-bar w3-black">
                 <a href="/index.html" class="w3-bar-item w3-button w3-mobile w3-hover-blue" style="width:33%">Home</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-blue" style="width:33%">Contact</a>
-                <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-blue" style="width:33%">About</a>
+                <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-blue" style="width:33%">Proyecto Tema 3</a>
             </div>
-            <h2>Bienvenido a la pagina principal de Tema3 </h2>
-
+         
             <table id="t1">
                 <tr>
                     <td>0. Hola mundo y phpinfo().</td>

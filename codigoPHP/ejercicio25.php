@@ -154,7 +154,8 @@
             //Mostrar formulario
             ?>
             <div >
-                <fieldset>
+                <fieldset style="width: 50%;margin-left: 10px;">
+                    <legend style="color:blue; font-weight:bold;">Plantilla Formulario </legend>
                     <table>
                         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
                             <tr>
