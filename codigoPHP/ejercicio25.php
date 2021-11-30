@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>25</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
             label{
@@ -25,6 +26,10 @@
         </style>
     </head>
     <body>
+        <blockquote class="w3-panel w3-leftbar w3-light-grey">
+            <p class="w3-large">
+                <i></i></p>
+            <p>- OUTMANE BOUHOU -</p>
         <?php
 //usar la libreria de validacion
         require_once '../core/210322ValidacionFormularios.php';
@@ -246,7 +251,7 @@
             <?php
         }
         ?>
-
+            <blockquote>
     </body>
 </html>
 
