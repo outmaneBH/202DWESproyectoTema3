@@ -19,6 +19,14 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="icon" href="../webroot/media/img/fav.png" type="image/ico" sizes="16x16">
         <style>
+            div{
+                background: white;
+            }
+            body{
+                background-image: url(../webroot/media/sunset.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
             form span{
                 color:red;
                 font-size: 15px;

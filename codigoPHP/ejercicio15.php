@@ -2,8 +2,10 @@
 <html lang="en">
 
     <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
-         table{
+
+            table{
                 border-collapse: collapse; 
                 width: 30%;
                 text-align: center;
@@ -16,6 +18,11 @@
         </style>
 
     </head>
+    <body>
+        <blockquote class="w3-panel w3-leftbar w3-light-grey">
+            <p class="w3-large">
+                <i> 15. Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la semana. (Array asociativo con los nombres de los días de la semana).</i></p>
+            <p>- OUTMANE BOUHOU -</p>
     <?php
     /*
      * Autor: Outmane Bouhou
@@ -42,5 +49,7 @@
     }
     echo"<tr><td colspan='2'><span>El sueldo total :" . $sueldoPercibido . "</span></td></tr></table>";
     ?>
-
+     </blockquote>
+    </body>
+</html>
 

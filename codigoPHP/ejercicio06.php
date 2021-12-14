@@ -6,7 +6,7 @@
     <body>
         <blockquote class="w3-panel w3-leftbar w3-light-grey">
             <p class="w3-large">
-                <i>5. Inicializar y mostrar una variable que tiene una marca de tiempo (timestamp)</i></p>
+                <i>6. Operar con fechas: calcular la fecha y el día de la semana de dentro de 60 días.</i></p>
             <p>- OUTMANE BOUHOU -</p>
             <?php
             /**
